@@ -1,0 +1,56 @@
+﻿@model crudcalisma.Models.Tbl_Personeller
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tbl_Personeller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.personelad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personelad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.personelsoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personelsoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.personelyas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personelyas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.personeldogumtarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personeldogumtarihi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

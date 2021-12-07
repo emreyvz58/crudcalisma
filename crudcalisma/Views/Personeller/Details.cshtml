@@ -1,0 +1,50 @@
+﻿@model crudcalisma.Models.Tbl_Personeller
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label class="control-label col-md-2">Ad</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personelad)
+        </dd>
+
+        <dt>
+            <label class="control-label col-md-2">Soyad</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personelsoyad)
+        </dd>
+
+        <dt>
+            <label class="control-label col-md-2">Yaş</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personelyas)
+        </dd>
+
+        <dt>
+            <label class="control-label col-md-2">Doğum Tarihi</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.personeldogumtarihi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.personelid }) |
+    @Html.ActionLink("Listeye Geri Dön", "Index")
+</p>
